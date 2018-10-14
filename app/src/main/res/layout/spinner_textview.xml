@@ -1,0 +1,11 @@
+<com.wilson.views.widgets.CustomTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/txtValue"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:paddingLeft="@dimen/spacing_standard"
+    android:layout_gravity="left"
+    android:textColor="@android:color/white"
+    android:textSize="14sp"
+    app:typeface="Roboto_Regular.ttf" />

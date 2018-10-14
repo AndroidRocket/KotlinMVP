@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">KishanHub</string>
+
+    <string name="internet_error">Please check you internet connection</string>
+
+    <string name="image_button_content_description">Change state of section</string>
+
+    <string-array name="array_one">
+        <item>Max temperature</item>
+        <item>Min temperature</item>
+        <item>Rainfall</item>
+    </string-array>
+
+    <string-array name="array_one_values">
+        <item>Tmax</item>
+        <item>Tmin</item>
+        <item>Rainfall</item>
+    </string-array>
+
+    <string-array name="array_two">
+        <item>UK</item>
+        <item>England</item>
+        <item>Scotland</item>
+        <item>Wales</item>
+    </string-array>
+</resources>

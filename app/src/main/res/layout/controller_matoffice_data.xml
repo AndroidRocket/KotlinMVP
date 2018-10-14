@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#34C9DD"
+    android:orientation="vertical">
+
+
+    <ProgressBar
+        android:id="@+id/pbMetOfficeData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:id="@+id/llFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_tiny"
+        android:layout_marginRight="@dimen/spacing_tiny"
+        android:layout_marginTop="@dimen/spacing_tiny"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llController"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <com.wilson.views.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_standard"
+                    android:text="Select Matrix"
+                    android:textColor="#094a73"
+                    android:textSize="10dp"
+                    app:typeface="Roboto_Light.ttf" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="@dimen/spacing_standard"
+                    android:layout_marginRight="@dimen/spacing_standard"
+                    android:layout_marginTop="@dimen/spacing_jerry"
+                    android:background="@drawable/btn_back">
+
+
+                    <Spinner
+                        android:id="@+id/spOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+
+                        android:layout_gravity="center_vertical"></Spinner>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <com.wilson.views.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_standard"
+                    android:text="Select Location"
+                    android:textColor="#094a73"
+                    android:textSize="10dp"
+                    app:typeface="Roboto_Light.ttf" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/spacing_standard"
+                    android:layout_marginRight="@dimen/spacing_standard"
+                    android:layout_marginTop="@dimen/spacing_jerry"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_back">
+
+                    <Spinner
+                        android:id="@+id/spTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"></Spinner>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.wilson.views.widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_standard"
+                    android:text=""
+                    android:textColor="#FFF"
+                    android:textSize="10dp"
+                    app:typeface="Roboto_Light.ttf" />
+
+                <Button
+                    android:id="@+id/btnGetData"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="@dimen/spacing_standard"
+                    android:layout_marginRight="@dimen/spacing_standard"
+                    android:layout_marginTop="@dimen/spacing_jerry"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_back"
+                    android:text="GO"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llFilter"
+        android:layout_marginLeft="@dimen/spacing_standard"
+        android:layout_marginRight="@dimen/spacing_standard"
+        android:layout_marginTop="@dimen/spacing_standard"
+        android:visibility="gone"
+
+        />
+
+    <com.wilson.views.widgets.CustomTextView
+        android:id="@+id/emptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        android:gravity="center_horizontal"
+        android:text="NO DATA FOUND"
+        android:textColor="#FFF"
+        android:textSize="20dp"
+        android:visibility="gone"
+        app:typeface="Roboto_Light.ttf" />
+
+</RelativeLayout>
