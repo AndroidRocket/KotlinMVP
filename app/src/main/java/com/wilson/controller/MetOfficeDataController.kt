@@ -21,6 +21,7 @@ import com.wilson.views.widgets.ItemOffsetDecoration
 import kotlinx.android.synthetic.main.controller_matoffice_data.view.*
 import javax.inject.Inject
 import android.widget.ArrayAdapter
+import com.wilson.utils.Constants
 import com.wilson.utils.SharedPrefsUtils
 
 
@@ -48,13 +49,13 @@ class MetOfficeDataController : BaseController(), MetOfficeDataContract.View, It
         adapterOne.setDropDownViewResource(R.layout.spinner_dropdown)
         rootView.spOne.adapter = adapterOne
         var array_one_values= applicationContext!!.resources.getStringArray(R.array.array_one_values)
-        rootView.spOne.setSelection(SharedPrefsUtils.getIntegerPreference(activity as Context,"matrix",0))
+        rootView.spOne.setSelection(SharedPrefsUtils.getIntegerPreference(activity as Context,Constants.PREF_MATRIX,0))
 
         val adapterTwo = ArrayAdapter.createFromResource(activity,
                 R.array.array_two, R.layout.spinner_textview)
         adapterTwo.setDropDownViewResource(R.layout.spinner_dropdown)
         rootView.spTwo.adapter = adapterTwo
-        rootView.spTwo.setSelection(SharedPrefsUtils.getIntegerPreference(activity as Context,"location",0))
+        rootView.spTwo.setSelection(SharedPrefsUtils.getIntegerPreference(activity as Context,Constants.PREF_LOCATION,0))
         val itemDecoration = ItemOffsetDecoration(activity as Context, R.dimen.tasklist_space)
         rootView.recyclerView.addItemDecoration(itemDecoration)
         mPresenter.initProgressDialog()
@@ -70,7 +71,7 @@ class MetOfficeDataController : BaseController(), MetOfficeDataContract.View, It
         rootView.pbMetOfficeData.visibility = View.GONE
         rootView.spOne.isEnabled = false
         rootView.spTwo.isEnabled = false
-        rootView.btnGetData.isEnabled = false
+//        rootView.btnGetData.isEnabled = false
 
     }
 
@@ -93,8 +94,8 @@ class MetOfficeDataController : BaseController(), MetOfficeDataContract.View, It
                     sectionedExpandableLayoutHelper.addSection(entry.key.toString(), entry.value as ArrayList<MetOfficeData>)
                 }
                 sectionedExpandableLayoutHelper.notifyDataSetChanged()
-                SharedPrefsUtils.setIntegerPreference(activity as Context,"matrix",rootView.spOne.selectedItemPosition)
-                SharedPrefsUtils.setIntegerPreference(activity as Context,"location",rootView.spTwo.selectedItemPosition)
+                SharedPrefsUtils.setIntegerPreference(activity as Context,Constants.PREF_MATRIX,rootView.spOne.selectedItemPosition)
+                SharedPrefsUtils.setIntegerPreference(activity as Context,Constants.PREF_LOCATION,rootView.spTwo.selectedItemPosition)
                 rootView.recyclerView.visibility = View.VISIBLE
             } else {
                 rootView.emptyView.visibility = View.VISIBLE
@@ -114,7 +115,7 @@ class MetOfficeDataController : BaseController(), MetOfficeDataContract.View, It
         rootView.recyclerView.visibility = View.GONE
         rootView.spOne.isEnabled = false
         rootView.spTwo.isEnabled = false
-        rootView.btnGetData.isEnabled = false
+//        rootView.btnGetData.isEnabled = false
     }
 
     override fun setOnlineScreen() {
@@ -122,7 +123,7 @@ class MetOfficeDataController : BaseController(), MetOfficeDataContract.View, It
         rootView.recyclerView.visibility = View.VISIBLE
         rootView.spOne.isEnabled = true
         rootView.spTwo.isEnabled = true
-        rootView.btnGetData.isEnabled = true
+//        rootView.btnGetData.isEnabled = true
     }
 
     override fun onClick(v: View?) {

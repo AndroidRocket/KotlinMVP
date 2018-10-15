@@ -4,6 +4,7 @@
     <string name="internet_error">Please check you internet connection</string>
 
     <string name="image_button_content_description">Change state of section</string>
+    <string name="no_data_label">NO DATA FOUND\n OR \n NO INTERNET AVAILABLE</string>
 
     <string-array name="array_one">
         <item>Max temperature</item>

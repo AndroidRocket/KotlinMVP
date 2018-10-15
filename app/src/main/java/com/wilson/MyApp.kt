@@ -13,7 +13,6 @@ class MyApp : Application()
 
     companion object {
         lateinit var component: AppComponent
-        val BASE_URL = "https://s3.eu-west-2.amazonaws.com/"
     }
 
     override fun onCreate() {
@@ -25,7 +24,7 @@ class MyApp : Application()
         component =
                 DaggerAppComponent.builder()
                 .databaseModule(DatabaseModule(applicationContext))
-                .remoteDataModule(RemoteDataModule(BASE_URL))
+                .remoteDataModule(RemoteDataModule(BuildConfig.BASE_URL))
                 .postRepoModule(PostRepoModule())
                 .build()
     }

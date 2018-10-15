@@ -11,14 +11,13 @@
         android:layout_width="match_parent"
         android:layout_centerInParent="true"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#C2EFF5"
+        app:cardBackgroundColor="@color/card_back"
         app:cardCornerRadius="@dimen/spacing_standard"
         app:cardElevation="@dimen/spacing_jerry">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#C2EFF5"
             android:orientation="vertical"
             android:padding="@dimen/spacing_standard"
             android:tag="front">
@@ -28,9 +27,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lines="1"
-                android:text="sdfsfsd"
                 android:paddingLeft="@dimen/spacing_tiny"
-                android:textColor="#415254"
+                android:textColor="@color/month_color"
                 android:textSize="16sp"
                 />
 
@@ -42,7 +40,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_jerry"
                 android:lines="1"
-                android:text="sdfsdf"
                 android:paddingLeft="@dimen/spacing_smaller"
                 android:paddingRight="@dimen/spacing_smaller"
                 android:textColor="@color/secondary_text"

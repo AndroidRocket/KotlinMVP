@@ -17,5 +17,8 @@
     <color name="dark_primary_alpha">#D90B0C0E</color>
 
     <color name="light_grey">#FCFCFC</color>
+    <color name="dark_blue">#094a73</color>
+    <color name="card_back">#C2EFF5</color>
+    <color name="month_color">#415254</color>
 
 </resources>
